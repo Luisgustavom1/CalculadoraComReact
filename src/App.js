@@ -24,7 +24,7 @@ export default function App(){
 
   // Funções
   const addDigitoTela = (d) => {
-    if((d==='/' || d==='*' || d==='-'|| d==='+') && operado){
+    if((d=='/' || d=='*' || d=='-'|| d=='+') && operado){
       console.log('*-+/=')
       setOperado(false)
       setValorTela(resultado + d)
@@ -32,11 +32,17 @@ export default function App(){
     }
     if(operado){
       setOperado(false)
+      console.log('digito true only')
       setValorTela(d)
       return
     }
     const valorDigitadoTela = valorTela + d
     setValorTela(valorDigitadoTela)
+    console.log(valorDigitadoTela[valorDigitadoTela.length-1])
+
+    if(valorDigitadoTela[valorDigitadoTela.length-1] == '/' || valorDigitadoTela[valorDigitadoTela.length-1] == '+'){
+      console.log('nos conforme')
+    }
   }
 
   const limparMemoria = () => {
