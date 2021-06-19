@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    background-color: #6D676E;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* title */
+h2{
+    color: #FBFFFE;
+    text-align: center;
+    margin: 30px 0 100px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* tela */
+.tela{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    background-color: #454146;
+    padding: 15px 25px 10px 25px;
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* button */
+button{
+    background-color: #1B1B1E;
+    color: #FBFFFE;
+    width: 80px;
+    height: 80px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+button:nth-child(1){
+    background-color: #FAA916;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:nth-child(17){
+    border-bottom-left-radius: .6rem;
+}
+button:nth-child(20){
+    border-bottom-right-radius: .6rem;
+}
+button:nth-child(19){
+    background-color: #96031A;
+}
+button:active{
+    background-color: #FAA916;
 }
