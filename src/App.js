@@ -32,16 +32,23 @@ export default function App(){
     }
     if(operado){
       setOperado(false)
-      console.log('digito true only')
       setValorTela(d)
       return
     }
     const valorDigitadoTela = valorTela + d
-    setValorTela(valorDigitadoTela)
-    console.log(valorDigitadoTela[valorDigitadoTela.length-1])
 
-    if(valorDigitadoTela[valorDigitadoTela.length-1] == '/' || valorDigitadoTela[valorDigitadoTela.length-1] == '+'){
-      console.log('nos conforme')
+    if(d==='/' || d==='*' || d==='-'|| d==='+'){
+      const penultimo = valorDigitadoTela[valorDigitadoTela.length -2]
+
+      if(penultimo === '+' || penultimo === '*' || penultimo === '-' || penultimo === '/'){
+        alert('Após um operador aritmético selecione um número!!')
+        setValorTela(valorTela)
+        
+      }else{
+        setValorTela(valorDigitadoTela)
+      }
+    }else{
+      setValorTela(valorDigitadoTela)
     }
   }
 
